@@ -28,6 +28,7 @@ export default function LoginScreen() {
     }
 
     return (
+        <div className="login"> 
         <div className=" col-md-5 shadow-lg p-3 bg-white rounded" style={{ width: '700px', margin: "10% 25% 25% 25%" }}>
             <div className="row justify-content-center">
                 <div style={{ textAlign: 'center' }} className="col-md-5 mt-5">
@@ -36,7 +37,7 @@ export default function LoginScreen() {
                     {error && (<Error error='Invalid inputs' />)}
                     <div >
                         <input style={{ marginTop: '10px', boxShadow: 'none' }} type="text" placeholder="email" className="form-control" required value={email} onChange={(e) => { setEmail(e.target.value) }} />
-                        <input style={{ marginTop: '10px', boxShadow: 'none' }} type="text" placeholder="password" className="form-control" required value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                        <input style={{ marginTop: '10px', boxShadow: 'none' }} type="password" placeholder="password" className="form-control" required value={password} onChange={(e) => { setPassword(e.target.value) }} />
                         <button onClick={login} className="btn mt-3">LOGIN</button>
                         <br />
                         <br />
@@ -51,6 +52,7 @@ export default function LoginScreen() {
                     <button className="signup">Sign up</button>
                 </a>
             
+        </div>
         </div>
     )
 }

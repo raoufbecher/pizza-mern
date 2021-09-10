@@ -14,12 +14,13 @@ export default function Navbar() {
             <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
                 <a className="navbar-brand" href="/">Commander vos repas</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"><i style={{color:"black"}} className="fas fa-bars"></i></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav" style={{ marginLeft: 'auto' }}>
                         {currentUser ? (
-                            <div className="mt-1">
+                            <div className="dropdown mt-1">
+                                
                             <DropdownButton size="sm" title={currentUser.name}>
                                 <Dropdown.Item href="/orders">Orders</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3" onClick={()=>{dispatch(logoutUser())}}><li>Logout</li></Dropdown.Item>

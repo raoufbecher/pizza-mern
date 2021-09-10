@@ -1,17 +1,26 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/userModel')
+const { validationResult } = require('express-validator')
+const {validationCheck} = require('./datacheck')
 
 
 
-
-router.post('/register', async (req, res) => {
-    const { name, email, password } = req.body
-
-    const newUser = new User({ name, email, password })
+router.post('/register',(validationCheck), async (req, res)=> {
+    
 
     try {
-        newUser.save()
+        const errors = validationResult(req)
+        if (!errors.isEmpty())
+            return res.status(400).json({ errors: errors.mapped() })
+        const { name, email, password } = req.body
+    const user= await User.findOne({email})
+    
+        if (user){
+            return res.status(400).json({ errors: [{ msg: 'User exist !' }] })
+        }
+        const newUser = new User({ name, email, password })
+        const registredUser= await newUser.save()
         res.send('user register success')
     } catch (error) {
         return res.status(400).json({ message: error })

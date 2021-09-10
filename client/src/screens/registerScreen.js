@@ -25,19 +25,21 @@ export default function RegisterScreen() {
 
     }
     return (
-        <div>
+        <div className='register'>
             <div className="row justify-content-center">
                 <div style={{ textAlign: 'left' }} className="col-md-5 mt-5">
 
                     {loading && (<Loading/>)}
                     {success && (<Success success='user register succefully'/>) }
-                    {error && (<Error error='Email already registered'/>)}
+                    {error && (<Error error="Password should be more then 6 caracters and email should be valid" />)}
                     <h2 className="text-center m-2" style={{ fontSize: '35px' }}>Register</h2>
                     <div >
                         <input style={{ marginTop: '10px', boxShadow: 'none' }} type="text" placeholder="name" className="form-control" required value={name} onChange={(e)=>{setName(e.target.value)}}/>
                         <input style={{ marginTop: '10px', boxShadow: 'none' }} type="text" placeholder="email" className="form-control" required  value={email} onChange={(e)=>{setEmail(e.target.value)}} />
-                        <input style={{ marginTop: '10px', boxShadow: 'none' }} type="text" placeholder="password" className="form-control" required value={password} onChange={(e)=>{setPassword(e.target.value)}} />
+                        <input style={{ marginTop: '10px', boxShadow: 'none' }} type="password" placeholder="password" className="form-control" required value={password} onChange={(e)=>{setPassword(e.target.value)}} />
+                        
                         <button onClick={register} className="btn mt-3">REGISTER</button>
+                        
                     </div>
 
                 </div>
