@@ -25,7 +25,7 @@ const { currentUser } = userState
     return (
         <div>
             <div >
-                    {currentUser && currentUser.isAdmin? (<button className="btn">Admin Panel</button>): (<div></div>) }
+                    {/* {currentUser && currentUser.isAdmin? (<button className="btn">Admin Panel</button>): (<div></div>) } */}
                 </div>
             <div className="row">
 
