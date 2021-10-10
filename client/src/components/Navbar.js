@@ -43,7 +43,7 @@ export default function Navbar() {
                       dispatch(logoutUser());
                     }}
                   >
-                    <li>Logout</li>
+                    <li>logout</li>
                   </Dropdown.Item>
                   {currentUser && currentUser.isAdmin ? (
                     <Dropdown.Item href="/admin">
