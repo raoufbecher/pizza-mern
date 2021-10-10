@@ -10,6 +10,7 @@ const history=useHistory();
 const userState = useSelector(state => state.loginUserReducer)
 const { currentUser } = userState
 
+
     // useEffect(() => {
  
     //     if(userState && userState.currentUser && userState.currentUser.isAdmin==="true") {
@@ -23,11 +24,14 @@ const { currentUser } = userState
  
     return (
         <div>
-            
+            <div >
+                    {currentUser && currentUser.isAdmin? (<button className="btn">Admin Panel</button>): (<div></div>) }
+                </div>
             <div className="row">
 
                 {restaurants.map(restaurant => {
                     return <div className="col-md-4" >
+
                         <div>
                             <Restaurants restaurant={restaurant} />
                         </div>

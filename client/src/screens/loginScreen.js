@@ -40,6 +40,7 @@ export default function LoginScreen() {
     function login() {
         const user = { email, password }
         dispatch(loginUser(user))
+
     }
 
     return (
@@ -66,6 +67,7 @@ export default function LoginScreen() {
                 <a href="/register" className="">
                     <button className="signup">Sign up</button>
                 </a>
+                
             
         </div>
         </div>
