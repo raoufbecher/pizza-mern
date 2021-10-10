@@ -16,16 +16,29 @@ export default function HomeScreen() {
         dispatch(getAllPizzas())
     }, []);
 
+
+//     useEffect(() => {
+ 
+//         if(user.isAdmin===true) {
+
+//             window.location.href = "/admin"
+//         }
+//         else{
+//             window.location.href = "/"
+//         } 
+//     })
+//     const user= localStorage.getItem('currentUser')
+// console.log(user,"deeeeeh")
     return (
         <div>
 
 
-            <div className="row justify-content-center">
+            <div  className="row justify-content-center">
             <Filter/>
                 {loading ? (<Loading/>) : error ? (<Error error="somethig went wrong"/>) : (
                         
                     pizzas.filter(elm=>elm.restaurantId===params.id).map(pizza => {
-                        return <div  key={pizza._id} className="col-md-3 m-3">
+                        return <div   key={pizza._id} className="col-md-3 m-3">
                             <div >
                             
                                 <Pizza pizza={pizza} />

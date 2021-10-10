@@ -28,7 +28,7 @@ export default function AddNewFood() {
             prices:{
                 small:smallprice,
                 medium:mediumprice,
-                large:largeprice
+                large:largeprice,
             },
             restaurantId,
         }
@@ -45,9 +45,9 @@ export default function AddNewFood() {
                 {success && (<Success success='New Food added successfully'/>)}
                 <form onSubmit={formHandler}>
                     <input className="form-control" type="text" placeholder="name" value={name} onChange={(e) => { setName(e.target.value) }}></input>
-                    <input className="form-control" type="text" placeholder="small pizza price" value={smallprice} onChange={(e) => { setSmallPrice(e.target.value) }}></input>
-                    <input className="form-control" type="text" placeholder="medium pizza price" value={mediumprice} onChange={(e) => { setMediumPrice(e.target.value) }}></input>
-                    <input className="form-control" type="text" placeholder="Large pizza price" value={largeprice} onChange={(e) => { setLargePrice(e.target.value) }}></input>
+                    <input className="form-control" type="text" placeholder="small price" value={smallprice} onChange={(e) => { setSmallPrice(e.target.value) }}></input>
+                    <input className="form-control" type="text" placeholder="medium price" value={mediumprice} onChange={(e) => { setMediumPrice(e.target.value) }}></input>
+                    <input className="form-control" type="text" placeholder="large price" value={largeprice} onChange={(e) => { setLargePrice(e.target.value) }}></input>
                     <input className="form-control" type="text" placeholder="image url" value={image} onChange={(e) => { setImage(e.target.value) }}></input>
                     <input className="form-control" type="text" placeholder="description" value={description} onChange={(e) => { setDescription(e.target.value) }}></input>
                     <input className="form-control" type="text" placeholder="category" value={category} onChange={(e) => { setCategory(e.target.value) }}></input>

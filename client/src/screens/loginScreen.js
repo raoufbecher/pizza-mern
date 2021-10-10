@@ -7,6 +7,7 @@ import Success from '../components/Success'
 import Error from '../components/Error'
 import Button from 'react-bootstrap/Button'
 import {Link} from 'react-router-dom'
+import {getAllUsers } from '../actions/userActions'
 
 
 export default function LoginScreen() {
@@ -16,11 +17,25 @@ export default function LoginScreen() {
     const { loading, error } = loginState
     const dispatch = useDispatch()
 
+    const userstate=useSelector(state => state.getAllUsersReducer)
+    const {users}= userstate
+
     useEffect(() => {
-        if (localStorage.getItem('currentUser')) {
-            window.location.href = "/"
+        dispatch (getAllUsers())
+
+        if (users.isAdmin==true) {
+            window.location.href = "/admin"
         }
     }, [])
+    
+    // useEffect(() => {
+
+    //     if(user.isAdmin===true) {
+    //         history.push('/admin')
+    //     }
+    // })
+
+        
 
     function login() {
         const user = { email, password }

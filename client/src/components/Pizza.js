@@ -26,7 +26,7 @@ export default function Pizza({ pizza }) {
     return (
         <div data-aos='zoom-in'  className='shadow-lg p-3 mb-5 bg-white rounded' key={pizza._id}>
 
-            <div onClick={handleShow}>
+            <div  onClick={handleShow}>
             <h1>{pizza.name}</h1>
             <img src={pizza.image} className="img-fluid" style={{ height: "200px", width: "200px" }} alt='pizza' />
             </div>

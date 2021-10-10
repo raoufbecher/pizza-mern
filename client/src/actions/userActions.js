@@ -26,6 +26,20 @@ export const loginUser=(user)=> async dispatch=>{
     }
 
 }
+// export const adminLogin=(admin)=> async dispatch=>{
+//     dispatch({type:"ADMIN_LOGIN_REQUEST"})
+
+//     try {
+//        const response= await axios.post('/api/users/login/admin', admin)
+//        console.log(response)
+//         dispatch({type:"ADMIN_LOGIN_SUCCESS", payload:response.data})
+//         localStorage.setItem("currentUser", JSON.stringify(response.data))
+//         window.location.href="/admin"
+//     } catch(error) {
+//         dispatch({type:"ADMIN_LOGIN_FAILED", payload:error})
+//     }
+
+// }
 
 export const logoutUser=() => dispatch => {
     localStorage.removeItem('currentUser')

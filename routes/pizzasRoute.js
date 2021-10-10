@@ -20,7 +20,7 @@ router.post("/addfood", async (req, res) => {
             name: food.name,
             category: food.category,
             image: food.image,
-            varients: ['small', 'medium', 'Large'],
+            varients: ['small', 'medium', 'large'],
             description: food.description,
             prices: [food.prices],
             restaurantId: food.restaurantId

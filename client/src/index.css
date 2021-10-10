@@ -1,100 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-body,html {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+body,
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Montserrat', sans-serif !important;
-  overflow-x:hidden !important;
+  font-family: "Montserrat", sans-serif !important;
+  overflow-x: hidden !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.nav-link{
-  color:black !important;
+.nav-link {
+  color: black !important;
 }
-.navbar-brand{
-  color:black !important;
+.navbar-brand {
+  color: black !important;
 }
 h1 {
   font-size: 20px !important;
 }
-.flex-container{
+.flex-container {
   display: flex;
-
 }
-.btn{
-  background-color:red !important;
+.btn {
+  background-color: red !important;
   color: aliceblue !important;
 }
-select{
-  box-shadow:none !important;
+select {
+  box-shadow: none !important;
   border-color: black !important;
 }
-.fa-plus{
-  color:green;
-  margin:5px
+.fa-plus {
+  color: green;
+  margin: 5px;
 }
-.fa-minus{
-  color:red;
-margin:5px
+.fa-minus {
+  color: red;
+  margin: 5px;
 }
-.fa-trash{
-  color:red
+.fa-trash {
+  color: red;
 }
-.resto{
+.resto {
   color: black;
 }
-.line{
+.line {
   color: aliceblue;
 }
-.inputt{
+.inputt {
   margin-top: 10px !important;
-  box-shadow:none !important;
+  box-shadow: none !important;
 }
-.signup{
+.signup {
   display: flex;
 }
-.adminfunction{
-  padding:10px;
-  background-color:rgb(4, 4, 104);
+.adminfunction {
+  padding: 10px;
+  background-color: rgb(4, 4, 104);
 }
-.adminfunction li{
-  
-  display:inline !important;
+.adminfunction li {
+  display: inline !important;
   list-style-type: none !important;
 }
 .adminfunction li a {
-  color:white !important;
+  color: white !important;
   padding: 30px;
   text-decoration: none !important;
-
 }
 
-td , th , tr {
-  text-align:left
+td,
+th,
+tr {
+  text-align: left;
 }
-.thead-dark{
-  background-color:rgb(61, 58, 58);
-  color:white
+.thead-dark {
+  background-color: rgb(61, 58, 58);
+  color: white;
 }
-.delivered{
-  color:white;
-  background-color:rgb(80, 223, 80)
+.delivered {
+  color: white;
+  background-color: rgb(80, 223, 80);
 }
-.login{
-background-image: url(./images/background1.svg);
-background-repeat: no-repeat!important;
-background-size: cover !important;
-height: 68vh;
+.login {
+  background-image: url(./images/background1.svg);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  height: 68vh;
 }
-.register{
+.register {
   background-image: url(./images/background2.svg);
-  background-repeat: no-repeat!important;
+  background-repeat: no-repeat !important;
   background-size: cover !important;
   height: 82vh;
 }
+.container {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 20px 10px;
+}
+.container .card {
+  max-width: 300px;
+  height: 420px;
+  height: 315px;
+  background: white;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover {
+  height: 420px;
+}
+.container .card .imgBx {
+  position: relative;
+
+  top: -60;
+  min-width: initial;
+  width: 260px;
+  height: 260px;
+  border-radius: 4px;
+  /* z-index: 1; */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .imgBx img {
+  max-width: 100%;
+  border-radius: 8px;
+  max-height: 80%;
+}
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0s;
+}
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+.restoname{
+  text-decoration: none !important;
+  color:black !important;
+}
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
