@@ -100,9 +100,9 @@ tr {
 }
 .container {
   position: relative;
-  width: 100vw;
+  width: 1100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px 20px 10px;
@@ -156,13 +156,9 @@ tr {
   margin-top: -40px;
   transition-delay: 0.3s;
 }
-.restoname {
+.restoname{
   text-decoration: none !important;
-  color: black !important;
+  color:black !important;
 }
-a:hover {
-  text-decoration: none;
-}
-a:active {
-  text-decoration: none;
-}
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
