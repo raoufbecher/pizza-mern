@@ -25,7 +25,7 @@ const { currentUser } = userState
     return (
         <div>
            
-            <div style={{width: '100vw'}} className="row">
+            <div style={{maxWidth: '100vw'}} className="row">
 
                 {restaurants.map(restaurant => {
                     return <div  className="col-md-4" >

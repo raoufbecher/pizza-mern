@@ -99,7 +99,7 @@ tr {
   height: 82vh;
 }
 .container {
-  position: relative;
+  
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -140,7 +140,7 @@ tr {
   max-height: 80%;
 }
 .container .card .content {
-  position: relative;
+ 
   margin-top: -140px;
   padding: 10px 15px;
   text-align: center;
