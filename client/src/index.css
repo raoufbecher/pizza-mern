@@ -99,10 +99,10 @@ tr {
   height: 82vh;
 }
 .container {
-  
+  position: relative;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px 20px 10px;
@@ -140,7 +140,7 @@ tr {
   max-height: 80%;
 }
 .container .card .content {
- 
+  position: relative;
   margin-top: -140px;
   padding: 10px 15px;
   text-align: center;
@@ -156,9 +156,13 @@ tr {
   margin-top: -40px;
   transition-delay: 0.3s;
 }
-.restoname{
+.restoname {
   text-decoration: none !important;
-  color:black !important;
+  color: black !important;
 }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
