@@ -3,10 +3,16 @@ import {useDispatch, useSelector} from 'react-redux'
 import {filterPizzas} from '../actions/pizzaActions'
 
 export default function Filter() {
+
     const dispatch = useDispatch()
     const [searchKey,setSearchKey] = useState('')
     const [category,setCategory] = useState('all')
+
+    console.log(searchKey)
     
+  
+
+
     return (
         <div className='container'>
             <div className="row justify-content-center shadow-lg p-3 mb-5 bg-white rounded">

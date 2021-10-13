@@ -28,10 +28,10 @@ export const filterPizzas = (searchKey, category) => async dispatch => {
     dispatch({ type: 'GET_PIZZAS_REQUEST' })
     try {
         const response = await axios.get('/api/pizzas/getallpizzas')
-        filteredPizzas = response.data.filter(pizza => pizza.name.toLowerCase().includes(searchKey))
-
+        filteredPizzas = response.data.filter(pizza => pizza.name.toLowerCase().includes(searchKey.toLowerCase()))
         if (category !== 'all') {
             filteredPizzas = response.data.filter(pizza => pizza.category.toLowerCase() == category)
+            
         }
 
 
