@@ -14,7 +14,7 @@ export default function Filter() {
 
 
     return (
-        <div className='container'>
+        <div>
             <div className="row justify-content-center shadow-lg p-3 mb-5 bg-white rounded">
 
                 <div className="col-md-3">
