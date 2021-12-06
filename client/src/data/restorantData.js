@@ -29,12 +29,95 @@ const restaurants = [
     phone: "20 110 022",
     temps: "Commander vos repas de 12:00 à 00:00",
   },
-  // {
-  //     _id:'4',
-  //     name:"Chaneb",
-  //     category:"Sandwichs",
-  //     placement:"Cité Riadh",
-  //     image:"https://10619-2.s.cdn12.com/rests/original/109_508589075.jpg"
-  // },
+  {
+    _id: "4",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "5",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "6",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "7",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "8",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "9",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "10",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "11",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
+  {
+    _id: "12",
+    name: "Taxi Pizza",
+    category: "Pizza",
+    placement: "Khzema",
+    image:
+      "https://zesttunisia.com//wp-content/uploads/2018/09/13939345_935140649946918_3700284716259502702_n.jpg",
+    phone: "20 110 022",
+    temps: "Commander vos repas de 12:00 à 00:00",
+  },
 ];
 export default restaurants;

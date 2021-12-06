@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+.entry-message {
+  background-color: red;
+  color: white;
+  margin: 0px 33% 0 33%;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.pannier {
+  font-size: 20px;
+  display: flex;
+  color: red;
+}
+.pannier-notification {
+  font-size: 13px;
+}
+.kmandi {
+  font-size: 30px;
+}

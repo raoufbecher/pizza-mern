@@ -20,6 +20,8 @@ code {
 }
 .navbar-brand {
   color: black !important;
+  display: flex;
+  padding: 5px;
 }
 h1 {
   font-size: 20px !important;
@@ -57,7 +59,10 @@ select {
   box-shadow: none !important;
 }
 .signup {
-  display: flex;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border-color: red !important;
 }
 .adminfunction {
   padding: 10px;
@@ -100,61 +105,37 @@ tr {
 }
 .container {
   position: relative;
-  width: 1100px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px 20px 10px;
 }
 .container .card {
-  max-width: 300px;
-  height: 420px;
-  height: 315px;
-  background: white;
-  margin: 30px 10px;
-  padding: 20px 15px;
+  width: 350px;
+  height: 100%;
   display: flex;
   border-radius: 10px;
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
 }
-.container .card:hover {
-  height: 420px;
-}
-.container .card .imgBx {
-  position: relative;
 
-  top: -60;
-  min-width: initial;
-  width: 260px;
-  height: 260px;
-  border-radius: 4px;
-  /* z-index: 1; */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
 .container .card .imgBx img {
   max-width: 100%;
+  margin-top: 5%;
+  width: 300px;
   border-radius: 8px;
   max-height: 80%;
 }
 .container .card .content {
   position: relative;
-  margin-top: -140px;
+  background-color: rgba(80, 74, 6, 0.075);
   padding: 10px 15px;
   text-align: center;
-  color: black;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-  transition-delay: 0s;
+  margin: 5px 20px 5px 20px;
+  border-radius: 8px;
+  font-weight: 1300;
 }
-.container .card:hover .content {
-  visibility: visible;
-  opacity: 1;
-  margin-top: -40px;
-  transition-delay: 0.3s;
-}
+
 .restoname {
   text-decoration: none !important;
   color: black !important;
@@ -164,4 +145,32 @@ a:hover {
 }
 a:active {
   text-decoration: none;
+}
+.inscri {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.inscription {
+  font-size: 17px !important;
+  text-decoration: none !important;
+  font-size: 20px !important;
+  border: 0;
+  border-radius: 5px;
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+.inscri:hover {
+  color: red !important;
+  background-color: white !important;
+
+  border: 2px solid rgb(226, 203, 203);
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+.styling {
+  margin-left: 25%;
 }

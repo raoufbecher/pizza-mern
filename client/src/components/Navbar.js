@@ -3,9 +3,9 @@ import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-
+import "../App.css";
 import { logoutUser } from "../actions/userActions";
-
+import logo from "../assets/logo.jpg";
 export default function Navbar() {
   const cardState = useSelector((state) => state.cardReducer);
   const userState = useSelector((state) => state.loginUserReducer);
@@ -13,11 +13,15 @@ export default function Navbar() {
   const dispatch = useDispatch();
   return (
     <div>
-      <nav style={{justifyContent: 'space-between'}} className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
+      <nav
+        style={{ justifyContent: "space-between" }}
+        className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded"
+      >
         <a className="navbar-brand" href="/">
-          Commander vos repas
+          {/* <img style={{ height: "50px" }} src={logo} alt="logo" /> */}
+          <div className="kmandi">k'mandi</div>
         </a>
-       {/*   <button
+        {/*   <button
           active="true"
           className="navbar-toggler"
           type="button"
@@ -32,7 +36,7 @@ export default function Navbar() {
           </span>
         </button>  */}
         <div className="" id="">
-          <ul className="navbar-nav" style={{ marginLeft:"auto"}}>
+          <ul className="navbar-nav" style={{ marginLeft: "auto" }}>
             {currentUser ? (
               <div className="dropdown mt-1">
                 <DropdownButton size="sm" title={currentUser.name}>
@@ -56,16 +60,24 @@ export default function Navbar() {
                 </DropdownButton>
               </div>
             ) : (
-              <li className="nav-item">
-                <a className="nav-link" href="/login">
-                  Login{" "}
+              <li style={{ marginTop: "5px" }} className="inscri">
+                <a className="inscription" href="/login">
+                  Se connecter/S'inscrire{" "}
                 </a>
               </li>
             )}
 
             <li className="nav-item">
               <a className="nav-link" href="/card">
-                Card {cardState.cardItems.length}{" "}
+                <i className="pannier fas fa-shopping-basket">
+                  <div className="pannier-notification">
+                    {cardState.cardItems.length == 0 ? (
+                      <div></div>
+                    ) : (
+                      cardState.cardItems.length
+                    )}
+                  </div>
+                </i>{" "}
               </a>
             </li>
           </ul>
