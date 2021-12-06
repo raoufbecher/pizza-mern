@@ -12,9 +12,6 @@ export default function Restaurant({ restaurant }) {
         <div className="container">
           <div data-aos="zoom-in" className="rounded">
             <div className="card">
-              <div>
-                <Divider />
-              </div>
               <div className="imgBx">
                 <img src={restaurant.image} alt="" />
               </div>
