@@ -7,7 +7,11 @@ import Error from "../components/Error";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { getAllUsers } from "../actions/userActions";
-
+import Google from "../images/google.png";
+import Facebook from "../images/facebook.png";
+import Github from "../images/github.png";
+import "../assets/login.css";
+import Divider from "@mui/material/Divider";
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,24 +43,35 @@ export default function LoginScreen() {
   }
 
   return (
-    <div className="login row justify-content-center">
-      <div
-        className=" col-md-5 shadow-lg p-3 bg-white rounded"
-        style={{ width: "700px", margin: "10% 25% 25% 25%" }}
-      >
-        <div className="row justify-content-center">
-          <div style={{ textAlign: "center" }} className="col-md-5 mt-5">
-            <h2 className="text-center m-2" style={{ fontSize: "35px" }}>
-              Login
-            </h2>
+    <div className="login1">
+      <h1 className="loginTitle">Choose a Login Method</h1>
+      <div className="wrapper">
+        <div className="left">
+          <div className="loginButton google">
+            <img src={Google} alt="" className="icon" />
+            Google
+          </div>
+          <div className="loginButton facebook">
+            <img src={Facebook} alt="" className="icon" />
+            Facebook
+          </div>
+          <div className="loginButton github">
+            <img src={Github} alt="" className="icon" />
+            Github
+          </div>
+        </div>
+        <div className="center1">
+          <div className="line11" />
+          <div className="or">OR</div>
+        </div>
+        <div className="right">
+          <div className="right">
             {loading && <Loading />}
             {error && <Error error="Invalid inputs" />}
-            <div>
+            <div className="right">
               <input
-                style={{ marginTop: "10px", boxShadow: "none" }}
                 type="text"
                 placeholder="email"
-                className="form-control"
                 required
                 value={email}
                 onChange={(e) => {
@@ -64,28 +79,27 @@ export default function LoginScreen() {
                 }}
               />
               <input
-                style={{ marginTop: "10px", boxShadow: "none" }}
                 type="password"
                 placeholder="password"
-                className="form-control"
                 required
                 value={password}
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
               />
-              <button onClick={login} className="btn mt-3">
+              <button className="submit" onClick={login}>
                 LOGIN
               </button>
+              <div className="line11" />
               <br />
               <br />
             </div>
           </div>
-        </div>
-        <div>
-          <a href="/register">
-            <button className="signup">Sign up</button>
-          </a>
+          <div>
+            <a href="/register">
+              <button className="submit">Sign up</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
