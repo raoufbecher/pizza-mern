@@ -103,38 +103,6 @@ tr {
   background-size: cover !important;
   height: 82vh;
 }
-.container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px 20px 10px;
-}
-.container .card {
-  width: 350px;
-  height: 100%;
-  display: flex;
-  border-radius: 10px;
-  flex-direction: column;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-}
-
-.container .card .imgBx img {
-  max-width: 100%;
-  margin-top: 5%;
-  width: 300px;
-  border-radius: 8px;
-  max-height: 80%;
-}
-.container .card .content {
-  position: relative;
-  background-color: rgba(80, 74, 6, 0.075);
-  padding: 10px 15px;
-  text-align: center;
-  margin: 5px 20px 5px 20px;
-  border-radius: 8px;
-  font-weight: 1300;
-}
 
 .restoname {
   text-decoration: none !important;

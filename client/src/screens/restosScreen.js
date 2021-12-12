@@ -30,10 +30,10 @@ export default function RestosScreen() {
         Pour passer une commande, Appeler nous au: 52550523 &nbsp;&nbsp;
         <PhoneIcon sx={{ fontSize: 22 }} className="mb-1" />
       </div>
-      <div style={{ marginLeft: "12%", marginRight: "12%" }} className="row">
+      <div className="restos" style={{ marginLeft: "12%", marginRight: "12%" }}>
         {restaurants.map((restaurant) => {
           return (
-            <div className="col-md-3">
+            <div >
               <div>
                 <Restaurants restaurant={restaurant} />
               </div>

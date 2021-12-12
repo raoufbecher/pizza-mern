@@ -5,7 +5,7 @@
   justify-content: center;
 }
 .wrapper {
-  width: 60%;
+  width: 50%;
   height: 75%;
   -webkit-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
   -moz-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
@@ -38,7 +38,7 @@
 }
 .line11 {
   width: 0.5px;
-  height: 35%;
+  height: 30%;
   background-color: lightgray;
   position: absolute;
   top: 0;
@@ -92,4 +92,42 @@ input {
   position: absolute;
   top: 150px;
   color: lightgray;
+}
+.forget-password {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .card {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    width: 65%;
+    height: 90%;
+    flex-direction: column;
+  }
+
+  .loginTitle {
+    display: none;
+  }
+
+  .center {
+    width: 100%;
+    position: relative;
+  }
+
+  .left {
+    padding: 20px;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  .line {
+    height: 0.5px;
+    width: 300px;
+  }
 }
