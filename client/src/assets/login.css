@@ -59,6 +59,17 @@
   margin-bottom: 20px;
   cursor: pointer;
 }
+.fb{
+  width: 150px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
 .google {
   background-color: #df4930;
 }
@@ -98,14 +109,17 @@ input {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 992px) {
+  .login1{
+    height: 100%
+  }
   .card {
     width: 100%;
     margin-bottom: 50px;
   }
 
   .wrapper {
-    width: 65%;
-    height: 90%;
+    width: 50%;
+    height: 140%;
     flex-direction: column;
   }
 
@@ -126,8 +140,9 @@ input {
     padding: 20px;
   }
 
-  .line {
-    height: 0.5px;
-    width: 300px;
+  .line11 {
+    height: 0px;
+    width: 0px;
+    
   }
 }

@@ -11,7 +11,13 @@ import Google from "../images/google.png";
 import Facebook from "../images/facebook.png";
 import Github from "../images/github.png";
 import "../assets/login.css";
+import { useHistory } from "react-router-dom";
 import Divider from "@mui/material/Divider";
+import { GoogleLogin } from "react-google-login";
+import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
+
+
+
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,29 +42,87 @@ export default function LoginScreen() {
   //         history.push('/admin')
   //     }
   // })
+  // useEffect(() => {
+  //   const token = user?.token;
+
+  //   if (token) {
+  //         window.location.href = "/";
+  //       }
+  // },[ ]);
 
   function login() {
     const user = { email, password };
     dispatch(loginUser(user));
   }
 
+  const googleSuccess = async (res) => {
+    const result = res?.profileObj;
+    const token = res?.tokenId;
+    try {
+      dispatch({ type: "AUTH", data: { result, token } });
+      window.location.href = "/";
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const googleFailure = (error) => {
+    console.log(error);
+  };
+
+  const responseFacebook = (response) => {
+    const result = response?.name;
+    const token = response?.accessToken;
+    console.log("response", response);
+    try {
+      dispatch({ type: "AUTHFACEBOOK", data: { result, token } });
+      window.location.href = "/";
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="login1">
       <h1 className="loginTitle">Choose a Login Method</h1>
       <div className="wrapper">
         <div className="left">
-          <div className="loginButton google">
-            <img src={Google} alt="" className="icon" />
-            Google
-          </div>
-          <div className="loginButton facebook">
-            <img src={Facebook} alt="" className="icon" />
-            Facebook
-          </div>
-          <div className="loginButton github">
+          <GoogleLogin
+            clientId="582480542332-enpurjpo7hq51u85vk6eca9fst73p66p.apps.googleusercontent.com"
+            render={(renderProps) => (
+              <div
+                className="loginButton google"
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+                startIcon={Google}
+                varient="contained"
+              >
+                <img src={Google} alt="" className="icon" /> Google
+              </div>
+            )}
+            onSuccess={googleSuccess}
+            onFailure={googleFailure}
+            cookiePolicy="single_host_origin"
+          />
+          <FacebookLogin
+            appId="467021691447992"
+            render={(renderProps) => (
+              <div
+                className="loginButton facebook"
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+                varient="contained"
+              >
+                <img src={Facebook} alt="" className="icon" />
+                Facebook
+              </div>
+            )}
+            callback={responseFacebook}
+          />
+
+          {/* <div className="loginButton github">
             <img src={Github} alt="" className="icon" />
             Github
-          </div>
+          </div> */}
         </div>
         <div className="center1">
           <div className="line11" />

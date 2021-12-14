@@ -13,7 +13,10 @@ import {
   registerUserReducer,
   loginUserReducer,
   getAllUsersReducer,
+  authReducer,
+  authReducerFacebook,
   loginAdminReducer,
+
 } from "./reducers/userReducer";
 import {
   placeOrderReducer,
@@ -33,6 +36,8 @@ const finalReducer = combineReducers({
   editFoodReducer: editFoodReducer,
   getAllOrdersReducer: getAllOrdersReducer,
   getAllUsersReducer: getAllUsersReducer,
+  authReducer:authReducer,
+  authReducerFacebook:authReducerFacebook
   // loginAdminReducer: loginAdminReducer,
 });
 

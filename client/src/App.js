@@ -12,7 +12,9 @@ import restosScreen from './screens/restosScreen';
 import Ordersscreen from './screens/Ordersscreen';
 import Adminscreen from './screens/Adminscreen';
 
-
+const isLoggedIn = localStorage.getItem("currentUser");
+const isLoggedInFacebook = localStorage.getItem("profileFacebook");
+const isLoggedInGoogle = localStorage.getItem("profile");
 
 function App() {
 
@@ -25,7 +27,7 @@ function App() {
       <Route path='/food/:id' exact component={HomeScreen} />
       <Route path='/card' exact component={cardScreen}/>
       <Route path='/register' exact component={registerScreen} />
-      <Route path='/login' exact component={loginScreen} />
+      <Route path='/login' exact component={(isLoggedIn || isLoggedInFacebook || isLoggedInGoogle )?  restosScreen : loginScreen}  />
       <Route path='/orders' exact component={Ordersscreen}/>
       <Route path="/admin"component={Adminscreen}></Route>
       </BrowserRouter>

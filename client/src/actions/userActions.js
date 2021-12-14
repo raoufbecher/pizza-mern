@@ -39,8 +39,12 @@ export const loginUser = (user) => async (dispatch) => {
 
 // }
 
+
+
 export const logoutUser = () => (dispatch) => {
+  localStorage.removeItem("profile");
   localStorage.removeItem("currentUser");
+  localStorage.removeItem("profileFacebook")
   window.location.href = "/login/";
 };
 
