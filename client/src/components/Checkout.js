@@ -12,12 +12,13 @@ export default function Checkout({ total }) {
   const { loading, error, success } = orderstate;
   const userState = useSelector((state) => state.loginUserReducer);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const [userFb, setUserFb] = useState(JSON.parse(localStorage.getItem("profileFacebook")));
   const { currentUser } = userState;
   console.log(currentUser, "sj");
 
 
   function tokenHandler(token) {
-    if ((currentUser || user) != null) {
+    if ((currentUser || user ||userFb) != null) {
       dispatch(placeOrder(token, total));
     } else {
       window.location.href = "/login";
