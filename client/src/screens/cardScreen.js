@@ -9,7 +9,6 @@ export default function CardScreen() {
         const cardItems = cardState.cardItems
         const total = cardItems.reduce((i,item)=> i+item.price,0)
         const dispatch = useDispatch()
-
     return (
         <div>
             <div className="row justify-content-center">

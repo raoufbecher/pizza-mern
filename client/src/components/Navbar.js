@@ -4,22 +4,31 @@ import { useDispatch, useSelector } from "react-redux";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import "../App.css";
-
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { logoutUser } from "../actions/userActions";
 import logo from "../assets/logo.jpg";
 
-export default function Navbar() {  
- 
+export default function Navbar() {
   const cardState = useSelector((state) => state.cardReducer);
   const userState = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userState;
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  const [userFb, setUserFb] = useState(JSON.parse(localStorage.getItem("profileFacebook")));
+  const [userFb, setUserFb] = useState(
+    JSON.parse(localStorage.getItem("profileFacebook"))
+  );
   const dispatch = useDispatch();
- 
 
-
-
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      right: -3,
+      top: 4,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: "0 4px",
+    },
+  }));
 
   return (
     <div>
@@ -33,11 +42,13 @@ export default function Navbar() {
 
         <div className="" id="">
           <ul className="navbar-nav" style={{ marginLeft: "auto" }}>
-            {currentUser || user ||userFb ? (
-              <div className="dropdown mt-1">
+            {currentUser || user || userFb ? (
+              <div className="dropdown">
                 <DropdownButton
                   size="sm"
-                  title={currentUser?.name || user?.result?.name || userFb?.result}
+                  title={
+                    currentUser?.name || user?.result?.name || userFb?.result
+                  }
                 >
                   <Dropdown.Item href="/orders">Orders</Dropdown.Item>
                   <Dropdown.Item
@@ -59,7 +70,7 @@ export default function Navbar() {
                 </DropdownButton>
               </div>
             ) : (
-              <li style={{ marginTop: "5px" }} className="inscri">
+              <li style={{ marginTop: "11px" }} className="inscri">
                 <a className="inscription" href="/login">
                   Se connecter/S'inscrire{" "}
                 </a>
@@ -68,7 +79,19 @@ export default function Navbar() {
 
             <li className="nav-item">
               <a className="nav-link" href="/card">
-                <i className="pannier fas fa-shopping-basket">
+                <IconButton aria-label="cart">
+                  <Badge
+                    className="pannier"
+                    badgeContent={
+                      cardState.cardItems.length 
+                    }
+                    color="secondary"
+                  >
+                    <ShoppingCartIcon />
+                  </Badge>
+                </IconButton>
+
+                {/* <i className="pannier fas fa-shopping-basket">
                   <div className="pannier-notification">
                     {cardState.cardItems.length == 0 ? (
                       <div></div>
@@ -76,7 +99,7 @@ export default function Navbar() {
                       cardState.cardItems.length
                     )}
                   </div>
-                </i>{" "}
+                </i>{" "} */}
               </a>
             </li>
           </ul>

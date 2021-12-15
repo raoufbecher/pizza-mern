@@ -40,7 +40,7 @@
 .pannier {
   font-size: 20px;
   display: flex;
-  color: red;
+  
 }
 .pannier-notification {
   font-size: 13px;
@@ -86,4 +86,7 @@
   margin: 5px 20px 5px 20px;
   border-radius: 8px;
   font-weight: 1300;
+}
+.dropdown{
+  margin-top:6px
 }
